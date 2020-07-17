@@ -15,7 +15,7 @@ class Task(models.Model):
         TodoList, on_delete=models.CASCADE, related_name='tasks')
     task_name = models.CharField(max_length=255)
     task_description = models.TextField(null=True)
-    due_date = models.DateTimeField(blank=True, null=True)
+    due_date = models.DateField(blank=True, null=True)
     task_completed = models.BooleanField(default=False)
 
     def __str__(self):
